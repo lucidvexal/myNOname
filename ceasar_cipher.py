@@ -1,13 +1,12 @@
-def cipher(words,step): 
-    code = '' 
-    for i in range(len(words)): 
-        x = words[i] 
-        if x.isupper(): 
-            code += chr((ord(x) + s-65)%26+65)
-        else:
-            code += chr((ord(x) + s-97)%26+65)
-    return code 
+def ceaser(chau,mau):
+    val=0
+    new=[]
+    for i in a:
+        val=ord(i)
+        chau=val+mau
+        new.append(chr(chau))
+    return(''.join(new))
 
-words=input()
-s=int(input())
-print(cipher(words,s))
+a=[str(i) for i in input("enter the character : ")]
+b=int(input("enter the shift : "))
+print("the cipher is : ",ceaser(a,b))
